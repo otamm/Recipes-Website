@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @recipe_page[0]["name"]%></title>
+    <link rel="stylesheet" href="sheets.css" />
+  </head>
+
+  <body>
+  <h1><%= @recipe_page[0]["name"]%></h1>
+  <h3><%= @recipe_page[0]["description"]%></h3>
+  <h3> You'll be needing:</h3>
+  <% @ingredients.each do |ingredient| %>
+    <p><%= ingredient["name"] %></p>
+    <%end%>
+  <h3> Instructions:</h3>
+    <p><%= @recipe_page[0]["instructions"]%></p>
+  </body>
+</html>
